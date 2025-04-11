@@ -1,9 +1,18 @@
+import json
+from datetime import datetime
 from src.playbook import IncidentResponsePlaybook
 from src.virustotal import ThreatEnrichment
 from src.notification import NotificationService
 from src.splunk_logger import SplunkLogger
 from src.soar_integration import SplunkSOAR
 
+def export_report_to_json(data, filename="incident_report"):
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    full_filename = f"{filename}_{timestamp}.json"
+    with open(full_filename, 'w') as f:
+        json.dump(data, f, indent=4)
+    print(f"[+] Reporte JSON generado: {full_filename}")
+    
 def main():
     playbook = IncidentResponsePlaybook()
     playbook.run()
