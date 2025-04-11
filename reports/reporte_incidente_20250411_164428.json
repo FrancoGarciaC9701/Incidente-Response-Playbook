@@ -1,0 +1,9 @@
+{
+    "tipo": "Phishing",
+    "email_sospechoso": "ladron@gmail.com",
+    "link_sospechoso": "http:/hacker.com.ar",
+    "acciones": [
+        "Bloquear el dominio del enlace en el firewall.",
+        "Alertar a los usuarios sobre el intento de phishing."
+    ]
+}

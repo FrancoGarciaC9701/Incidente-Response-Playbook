@@ -1,0 +1,5 @@
+# Por ahora vacío, después agregamos:
+# requests
+# fpdf
+# etc.
+streamlit
